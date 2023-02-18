@@ -1,8 +1,15 @@
-import { render, screen } from '@testing-library/react';
 import App from './App';
+import { render } from './test-utils';
 
-test('renders learn react link', () => {
+// jest.mock('./components/home.js', () => {
+//   return () => <div>Home component</div>;
+// });
+
+// jest.mock('./components/header.js', () => {
+//   return () => <div>Header component</div>;
+// });
+
+it('renders app component', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  //screen.debug();
 });
